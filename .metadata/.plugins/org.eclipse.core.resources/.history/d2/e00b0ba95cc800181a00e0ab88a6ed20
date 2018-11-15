@@ -1,0 +1,6 @@
+package com.example.demo.dao;
+
+// 디비와 대화하는 클래스는 관습적으로 인터페이스를 두고 구현 클래스를 따로 작성합니다.
+public interface EmpDao {
+
+}

@@ -1,0 +1,43 @@
+package com.google.ace;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Enumeration;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+//@WebServlet("/cookie")
+public class CookieServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	private static int count = 0;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/plain");
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		// 프로젝트 구분 문자열(Context Path) : /1-hello-world
+		
+//		 response.setContentType("text/plain;charset=euc-kr");
+		
+		 PrintWriter out = response.getWriter();
+		 out.println();
+		 out.println("## 초기 파라미터들.... ##");
+		//파라미터의 이름을 가지고옴
+		 Enumeration<String> e = getInitParameterNames();
+		 while(e.hasMoreElements()) {
+		 String name = (String) e.nextElement();
+		 out.println(name + " ---> " + getInitParameter(name)); //이름을가지고값을
+		 }
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

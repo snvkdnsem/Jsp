@@ -1,0 +1,20 @@
+package com.example.login;
+
+import javax.servlet.ServletException.WebFault;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+
+// http://localhost:8080/2-session-login/ ====> "/" 매칭됩니다.
+
+@WebServlet({"/", "/home")
+public class HomeServlet {
+	private static final long serialVersionUID = 1L;
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse)
+		// 서블릿 클래스에서 화면처리를 JSP에게 위임합니다.
+		String path = "/WEB-INF/views/home.jsp";
+		req.getRequestDispatcher(path).forward(req, res);;
+}
+
+protected void doPost(Http)

@@ -1,0 +1,15 @@
+package com.example.login;
+
+import javax.servlet.ServletException.WebFault;
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet({"/", "/home")
+public class HomeServlet {
+	private static final long serialVersionUID = 1L;
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse)
+		// 서블릿 클래스에서 화면처리를 JSP에게 위임합니다.
+}
+
+protected void doPost(Http)

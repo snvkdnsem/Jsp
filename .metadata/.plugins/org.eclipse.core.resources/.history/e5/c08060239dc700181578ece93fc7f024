@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Hello World!</h1>
+	<ul>
+  <li> Item one </li>
+  <li> Item two </li>
+</ul>
+
+</body>
+</html>
